@@ -1,0 +1,22 @@
+﻿@page
+@model BattingModel
+@{
+    ViewData["Title"] = "Import Users";
+}
+
+<div class="row">
+    <div class ="col-md-6">
+        <form method="post" enctype= "multipart/form-data">
+           <dl>
+                <dt>
+                    <label asp-for="UploadCSV"></label>
+                </dt>
+               <dd>
+                   <input asp-for="UploadCSV"  type=file/>
+                   <span asp-validation-for="UploadCSV"></span>
+               </dd>
+           </dl>
+           <input asp-page-handler="Upload" class="btn" type="submit" value="Upload"/>
+        </form> 
+    </div>
+</div>
